@@ -24,7 +24,7 @@ public class PlayerMove : NetworkBehaviour
 
         transform.Translate(x, 0, z);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             //Command function is called from the client, but invoked on the server
             CmdFire();
@@ -40,25 +40,21 @@ public class PlayerMove : NetworkBehaviour
     [Command]
     void CmdFire()
     {
-        //This [Command] code is run on the server!
+        // This [Command] code is run on the server!
 
-        //Create the bullet object locally
-        //Create the bullet object from the bullet prefab
+        // create the bullet object locally
         var bullet = (GameObject)Instantiate(
-            bulletPrefab,
-            transform.position - transform.forward,
-            Quaternion.identity
-            );
+             bulletPrefab,
+             transform.position - transform.forward,
+             Quaternion.identity);
 
-        //make the bullet move away in front of the player
         bullet.GetComponent<Rigidbody>().velocity = -transform.forward * 4;
 
-        //spaw the bullet on the clients
+        // spawn the bullet on the clients
         NetworkServer.Spawn(bullet);
 
-        //When the bullet is destroyt on the server
+        // when the bullet is destroyed on the server it will automaticaly be destroyed on clients
         Destroy(bullet, 2.0f);
-
     }
 
     //void Fire()

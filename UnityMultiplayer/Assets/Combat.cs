@@ -8,6 +8,9 @@ public class Combat : NetworkBehaviour
     [SyncVar]
     public int health = maxHealth;
 
+    public bool destroyOnDeath;
+
+
     public void TakeDamage(int amount)
     {
         if (!isServer)
@@ -16,10 +19,17 @@ public class Combat : NetworkBehaviour
         health -= amount;
         if (health <= 0)
         {
-            health = maxHealth;
+            if (destroyOnDeath)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                health = maxHealth;
 
-            // called on the server, will be invoked on the clients
-            RpcRespawn();
+                // called on the server, will be invoked on the clients
+                RpcRespawn();
+            }
         }
     }
 
