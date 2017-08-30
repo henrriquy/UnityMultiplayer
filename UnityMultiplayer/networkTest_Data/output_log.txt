@@ -15,19 +15,14 @@ Platform assembly: C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Man
 Loading C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.099 seconds
+- Completed reload, in  0.076 seconds
 Platform assembly: C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\git\UnityMultiplayer\UnityMultiplayer\networkTest_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+desktop: 1920x1080 59Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.173728 ms
+UnloadTime: 1.158716 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 11b4 -> priority: 1 
-  Thread -> id: 28f4 -> priority: 1 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:63256} time {96668}, last rec time {94660} rtt {11} timeout {2000}
-ServerDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
+  Thread -> id: 29a0 -> priority: 1 
+  Thread -> id: 3498 -> priority: 1 
